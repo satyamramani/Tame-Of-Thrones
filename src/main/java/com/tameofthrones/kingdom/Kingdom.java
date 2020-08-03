@@ -1,5 +1,9 @@
 package com.tameofthrones.kingdom;
 
+/*
+* To store kingdomName and its emblem.
+*/
+
 public class Kingdom {
   
   public String kingdomName;
