@@ -1,3 +1,5 @@
-/home/satyam/project/tame-of-thrones/src/test/java/com/tameofthrones/MainTest.java
+/home/satyam/project/tame-of-thrones/src/test/java/com/tameofthrones/dto/KingdomTest.java
+/home/satyam/project/tame-of-thrones/src/test/java/com/tameofthrones/controller/RulerStrategyTest.java
 /home/satyam/project/tame-of-thrones/src/test/java/com/tameofthrones/controller/MatchEmblemTest.java
 /home/satyam/project/tame-of-thrones/src/test/java/com/tameofthrones/cipher/CipherEncryptionTest.java
+/home/satyam/project/tame-of-thrones/src/test/java/com/tameofthrones/create/CreateKingdomTest.java
