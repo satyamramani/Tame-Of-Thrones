@@ -1,4 +1,4 @@
-package com.tameofthrones.controller;
+package com.tameofthrones.read;
 
 import java.io.BufferedReader;
 import java.io.File;
