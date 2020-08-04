@@ -15,12 +15,18 @@ public class CipherEncryptionTest {
 
   @Test
   public void encryptionTest() {
+
     CreateKingdoms createkingdoms = new CreateKingdomsImp();
     CipherEncryption cipherEncryption = new CipherEncryptionImp();
     List<Kingdom> kingdoms = createkingdoms.getKingdoms();
     Map<String,String> encryptedEmblemKingdoms = cipherEncryption.encryptEmblem(kingdoms);
     assertEquals("RZO", encryptedEmblemKingdoms.get("AIR"));
+    assertEquals("UFSIF", encryptedEmblemKingdoms.get("LAND"));
+    assertEquals("THTTVAO", encryptedEmblemKingdoms.get("ICE"));
+    assertEquals("JXGMUT", encryptedEmblemKingdoms.get("FIRE"));
+    assertEquals("VJAVWBZ", encryptedEmblemKingdoms.get("WATER"));
     assertEquals("OWL", kingdoms.get(4).getEmblem());
+
   }
 
 }
