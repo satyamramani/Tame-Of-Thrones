@@ -29,5 +29,13 @@ public class Kingdom {
     this.kingdomName = kingdomName;
     this.emblem = emblem;
   }
+
+  public Kingdom() {
+  }
+
+  public Kingdom(Kingdom kingdom) {
+    kingdomName = kingdom.kingdomName;
+    emblem = kingdom.emblem;
+  }
   
 }

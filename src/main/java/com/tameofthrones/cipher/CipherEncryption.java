@@ -1,5 +1,6 @@
 package com.tameofthrones.cipher;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.tameofthrones.kingdom.Kingdom;
@@ -11,20 +12,31 @@ import com.tameofthrones.kingdom.Kingdom;
 
 public class CipherEncryption {
   
-  public void encryptEmblem(List<Kingdom> kingdoms) {
-    for (Kingdom kingdomEmblem : kingdoms) {
-      String emblem = cipherEncryption(kingdomEmblem.getEmblem()).toUpperCase();
+  public List<Kingdom> encryptEmblem(List<Kingdom> kingdoms) {
+    List<Kingdom> kingdomsCopy = new ArrayList<Kingdom>(kingdoms.size());
+    for (Kingdom kingdom : kingdoms) kingdomsCopy.add(new Kingdom(kingdom));
+    for (Kingdom kingdomEmblem : kingdomsCopy) {
+      String emblem = cipherEncryption(kingdomEmblem.getEmblem().toUpperCase());
       kingdomEmblem.setEmblem(emblem);
     }
+    return kingdomsCopy;
   }
 
   private String cipherEncryption(String emblem) {
     int cipherKey = emblem.length();
     String encryptedEmblem = "";
     for (int i = 0; i < cipherKey; i++) {
-      encryptedEmblem += (emblem.charAt(i) + cipherKey);
+      int encryptedEmblemChar = emblem.charAt(i) + cipherKey;
+      if(encryptedEmblemChar > 90) {
+        encryptedEmblemChar = encryptedEmblemChar - 26;
+        encryptedEmblem += (char)(encryptedEmblemChar);
+      }
+      else {
+        encryptedEmblem += (char)(encryptedEmblemChar);
+      }
+      
     }
-    return null;
+    return encryptedEmblem;
   }
 
 }

@@ -14,12 +14,12 @@ public class CreateKingdomsImp implements CreateKingdoms {
 
   public CreateKingdomsImp() {
 
-    kingdomAndEmblem.put("SPACE", "Gorilla");
-    kingdomAndEmblem.put("LAND", "Panda");
-    kingdomAndEmblem.put("WATER", "Octopus");
-    kingdomAndEmblem.put("ICE", "Mammoth");
-    kingdomAndEmblem.put("AIR", "Owl");
-    kingdomAndEmblem.put("FIRE", "Dragon");
+    kingdomAndEmblem.put("SPACE", "GORILLA");
+    kingdomAndEmblem.put("LAND", "PANDA");
+    kingdomAndEmblem.put("WATER", "OCTOPUS");
+    kingdomAndEmblem.put("ICE", "MAMMOTH");
+    kingdomAndEmblem.put("AIR", "OWL");
+    kingdomAndEmblem.put("FIRE", "DRAGON");
 
   }
 
