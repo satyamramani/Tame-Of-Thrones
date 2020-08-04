@@ -12,10 +12,6 @@ import com.tameofthrones.dto.Kingdom;
 import com.tameofthrones.dto.Messages;
 import com.tameofthrones.read.ReadMessage;
 
-/**
- * Hello world!
- *
- */
 public class Main {
     public static void main(String[] args) throws IOException {
 
