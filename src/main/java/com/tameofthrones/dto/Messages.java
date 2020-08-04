@@ -3,6 +3,7 @@ package com.tameofthrones.dto;
 /*
 * To store the kingdom and the encrypted messages.
 */
+
 public class Messages {
   
   public String kingdom;

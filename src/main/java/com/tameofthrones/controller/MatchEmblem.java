@@ -5,10 +5,12 @@ import java.util.Set;
 
 public class MatchEmblem {
 
+  // this methode will match the encryptedMessage to encryptedEmblem and returns true or false.
   public boolean matchEmblemWithMessage(String encryptedMessage, String encryptedEmblem) {
 
     Set<Character> emblemCharSet = stringToCharacterSet(encryptedEmblem);
 
+    //iterate over each char in message and remove the matching char from set(emblemCharSet).
     for (char ch : encryptedMessage.toCharArray()) {
       if (emblemCharSet.contains(ch)) {
         emblemCharSet.remove(ch);
