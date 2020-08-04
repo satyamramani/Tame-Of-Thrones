@@ -3,6 +3,7 @@ package com.tameofthrones.cipher;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.List;
+import java.util.Map;
 
 import com.tameofthrones.create.CreateKingdoms;
 import com.tameofthrones.create.CreateKingdomsImp;
@@ -17,8 +18,8 @@ public class CipherEncryptionTest {
     CreateKingdoms createkingdoms = new CreateKingdomsImp();
     CipherEncryption cipherEncryption = new CipherEncryptionImp();
     List<Kingdom> kingdoms = createkingdoms.creatKingdoms();
-    List<Kingdom> encryptedEmblemKingdoms = cipherEncryption.encryptEmblem(kingdoms);
-    assertEquals("RZO", encryptedEmblemKingdoms.get(4).getEmblem());
+    Map<String,String> encryptedEmblemKingdoms = cipherEncryption.encryptEmblem(kingdoms);
+    assertEquals("RZO", encryptedEmblemKingdoms.get("AIR"));
     assertEquals("OWL", kingdoms.get(4).getEmblem());
   }
 

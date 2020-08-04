@@ -1,6 +1,7 @@
 package com.tameofthrones.cipher;
 
 import java.util.List;
+import java.util.Map;
 
 import com.tameofthrones.dto.Kingdom;
 
@@ -12,6 +13,6 @@ import com.tameofthrones.dto.Kingdom;
 
 public interface CipherEncryption {
   
-  List<Kingdom> encryptEmblem(List<Kingdom> kingdoms);
+  Map<String,String> encryptEmblem(List<Kingdom> kingdoms);
 
 }
