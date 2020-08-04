@@ -32,6 +32,10 @@ public class Main {
     RulerStrategy rulerStrategy = new RulerStrategyImp();
 
     Set<String> wonKingdoms = rulerStrategy.getWonKingdoms(kingdoms, messages);
-    System.out.println(wonKingdoms);
+
+    for (String kingdomName : wonKingdoms) {
+      System.out.print(kingdomName + " ");
+    }
+    
   }
 }
