@@ -17,7 +17,7 @@ public class CipherEncryptionTest {
   public void encryptionTest() {
     CreateKingdoms createkingdoms = new CreateKingdomsImp();
     CipherEncryption cipherEncryption = new CipherEncryptionImp();
-    List<Kingdom> kingdoms = createkingdoms.creatKingdoms();
+    List<Kingdom> kingdoms = createkingdoms.getKingdoms();
     Map<String,String> encryptedEmblemKingdoms = cipherEncryption.encryptEmblem(kingdoms);
     assertEquals("RZO", encryptedEmblemKingdoms.get("AIR"));
     assertEquals("OWL", kingdoms.get(4).getEmblem());

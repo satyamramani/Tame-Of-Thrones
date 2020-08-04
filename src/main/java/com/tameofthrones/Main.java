@@ -1,7 +1,6 @@
 package com.tameofthrones;
 
 import java.io.IOException;
-import java.text.RuleBasedCollator;
 import java.util.List;
 import java.util.Set;
 
@@ -24,7 +23,7 @@ public class Main {
     List<Messages> messages = readMessage.readInputMessages(args[0]);
     CreateKingdoms createKingdom = new CreateKingdomsImp();
     RulerStrategy rulerStrategy = new RulerStrategyImp();
-    List<Kingdom> kingdoms = createKingdom.creatKingdoms();
+    List<Kingdom> kingdoms = createKingdom.getKingdoms();
     Set<String> wonKingdoms = rulerStrategy.getWonKingdoms(kingdoms, messages);
     System.out.println(wonKingdoms);
   }

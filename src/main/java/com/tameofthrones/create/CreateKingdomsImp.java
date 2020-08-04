@@ -24,7 +24,7 @@ public class CreateKingdomsImp implements CreateKingdoms {
 
   }
 
-  public List<Kingdom> creatKingdoms() {
+  public List<Kingdom> getKingdoms() {
 
     for (String kingdomName : kingdomAndEmblem.keySet()) {
       Kingdom kingdom = new Kingdom(kingdomName, kingdomAndEmblem.get(kingdomName));

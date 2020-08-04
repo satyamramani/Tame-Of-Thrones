@@ -11,6 +11,6 @@ import com.tameofthrones.dto.Kingdom;
 
 public interface CreateKingdoms {
   
-  List<Kingdom> creatKingdoms();
+  List<Kingdom> getKingdoms();
 
 }

@@ -33,10 +33,5 @@ public class Kingdom {
   public Kingdom() {
   }
 
-  //copy constructor
-  public Kingdom(Kingdom kingdom) {
-    kingdomName = kingdom.kingdomName;
-    emblem = kingdom.emblem;
-  }
   
 }
