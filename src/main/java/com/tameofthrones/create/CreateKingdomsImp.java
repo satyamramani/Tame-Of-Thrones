@@ -5,7 +5,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.tameofthrones.kingdom.Kingdom;
+import com.tameofthrones.dto.Kingdom;
+
 
 public class CreateKingdomsImp implements CreateKingdoms {
 

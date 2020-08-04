@@ -2,7 +2,7 @@ package com.tameofthrones.create;
 
 import java.util.List;
 
-import com.tameofthrones.kingdom.Kingdom;
+import com.tameofthrones.dto.Kingdom;
 
 /*
 * Create kingdoms with a method createKindoms.

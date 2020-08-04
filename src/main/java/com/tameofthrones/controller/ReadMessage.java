@@ -7,7 +7,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.tameofthrones.messages.Messages;
+import com.tameofthrones.dto.Messages;
+
 
 /*
 * This class have one function readInputMessages which reads the input messages.

@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.List;
 
 import com.tameofthrones.controller.ReadMessage;
-import com.tameofthrones.messages.Messages;
+import com.tameofthrones.dto.Messages;
 
 /**
  * Hello world!
