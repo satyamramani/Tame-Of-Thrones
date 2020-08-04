@@ -1,22 +1,16 @@
 package com.tameofthrones.dto;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonMappingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
 public class KingdomTest {
 
-    @Test
-    public void serializeAndDeserializeKingdom() throws JsonMappingException, JsonProcessingException {
-    final String kingdomString = 
-        "{\n"
-            + "  \"kingdomName\": \"LAND\",\n"
-            + "  \"emblem\": \"PANDA\"\n"
-        + "}";
+  @Test
+  public void serializeAndDeserializeKingdom() {
+    Kingdom kingdom = new Kingdom("LAND","PANDA");
 
-    Kingdom kingdom = new Kingdom();
-    kingdom = new ObjectMapper().readValue(kingdomString, Kingdom.class);
+    assertEquals("LAND",kingdom.getKingdomName());
+    assertEquals("PANDA",kingdom.getEmblem());
   }
 }
