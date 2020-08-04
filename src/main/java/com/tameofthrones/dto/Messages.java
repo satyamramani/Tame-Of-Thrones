@@ -1,4 +1,4 @@
-package com.tameofthrones.messages;
+package com.tameofthrones.dto;
 
 /*
 * To store the kingdom and the encrypted messages.

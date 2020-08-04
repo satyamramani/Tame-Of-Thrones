@@ -1,4 +1,4 @@
-package com.tameofthrones.kingdom;
+package com.tameofthrones.dto;
 
 /*
 * To store kingdomName and its emblem.
@@ -33,6 +33,7 @@ public class Kingdom {
   public Kingdom() {
   }
 
+  //copy constructor
   public Kingdom(Kingdom kingdom) {
     kingdomName = kingdom.kingdomName;
     emblem = kingdom.emblem;
