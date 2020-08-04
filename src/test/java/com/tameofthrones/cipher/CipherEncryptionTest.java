@@ -2,6 +2,8 @@ package com.tameofthrones.cipher;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
@@ -14,7 +16,7 @@ import org.junit.jupiter.api.Test;
 public class CipherEncryptionTest {
 
   @Test
-  public void encryptionTest() {
+  public void encryptEmblemTest() {
 
     CreateKingdoms createkingdoms = new CreateKingdomsImp();
     CipherEncryption cipherEncryption = new CipherEncryptionImp();
@@ -24,10 +26,52 @@ public class CipherEncryptionTest {
     
     assertEquals("RZO", encryptedEmblemKingdoms.get("AIR"));
     assertEquals("UFSIF", encryptedEmblemKingdoms.get("LAND"));
-    assertEquals("THTTVAO", encryptedEmblemKingdoms.get("ICE"));
-    assertEquals("JXGMUT", encryptedEmblemKingdoms.get("FIRE"));
-    assertEquals("VJAVWBZ", encryptedEmblemKingdoms.get("WATER"));
-    assertEquals("OWL", kingdoms.get(4).getEmblem());
+
+  }
+
+  @Test
+  public void checkOriginalKingdom() { // for kingdom after encryption
+
+    List<String> kingdomEmblem = new ArrayList<String>();
+    
+    CreateKingdoms createkingdoms = new CreateKingdomsImp();
+  
+    List<Kingdom> kingdoms = createkingdoms.getKingdoms();
+
+    CipherEncryption cipherEncryption = new CipherEncryptionImp();
+
+    cipherEncryption.encryptEmblem(kingdoms);
+
+    for (Kingdom kingdom : kingdoms) {
+      kingdomEmblem.add(kingdom.getEmblem());
+    }
+
+    Collections.sort(kingdomEmblem);
+
+    List<String> expectedKingdomEmblem = new ArrayList<String>();
+    expectedKingdomEmblem.add("GORILLA");
+    expectedKingdomEmblem.add("PANDA");
+    expectedKingdomEmblem.add("MAMMOTH");
+    expectedKingdomEmblem.add("OCTOPUS");
+    expectedKingdomEmblem.add("OWL");
+    expectedKingdomEmblem.add("DRAGON");
+
+    Collections.sort(expectedKingdomEmblem);
+
+    assertEquals(expectedKingdomEmblem, kingdomEmblem);
+    
+  }
+
+  @Test
+  public void checkStringEncryptionTest() {
+
+    CipherEncryptionImp cipherEncryption = new CipherEncryptionImp();
+
+    String encryptedString1 = cipherEncryption.cipherEncryptionString("PANDA");
+    String encryptedString2 = cipherEncryption.cipherEncryptionString("OWL");
+
+    assertEquals("UFSIF", encryptedString1);
+    assertEquals("RZO", encryptedString2);
 
   }
 

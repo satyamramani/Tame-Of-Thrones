@@ -12,13 +12,22 @@ public class MatchEmblemTest {
     MatchEmblem matchEmblem = new MatchEmblem();
     String encryptedMessage1 = "FAIJWJSOOFAMAU";
     String encryptedMessage2 = "AIJWJSOOFAMAU";
-    String encryptedMessage3 = "FFAIJWJSOOFAMAU";
     String encryptedEmblem1 = "UFSIF";
-    String encryptedEmblem2 = "RZO";
 
     assertTrue(matchEmblem.matchEmblemWithMessage(encryptedMessage1, encryptedEmblem1));
     assertFalse(matchEmblem.matchEmblemWithMessage(encryptedMessage2, encryptedEmblem1));
+  }
+
+  @Test
+  public void matchEmblemWithSmallCase() { // for characters to be case sensitive.
+
+    MatchEmblem matchEmblem = new MatchEmblem();
+    String encryptedMessage1 = "FAIJWJSOOFAMAU";
+    String encryptedMessage2 = "faijwjsoofamau";
+    String encryptedEmblem1 = "ufsif";
+    String encryptedEmblem2 = "UFSIF";
+
+    assertFalse(matchEmblem.matchEmblemWithMessage(encryptedMessage1, encryptedEmblem1));
     assertFalse(matchEmblem.matchEmblemWithMessage(encryptedMessage2, encryptedEmblem2));
-    assertTrue(matchEmblem.matchEmblemWithMessage(encryptedMessage3, encryptedEmblem1));
   }
 }

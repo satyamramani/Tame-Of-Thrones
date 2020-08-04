@@ -17,7 +17,7 @@ public class CipherEncryptionImp implements CipherEncryption {
     //iterate over each kingdom and encrypt its emblem.
     for (Kingdom kingdomEmblem : kingdoms) {
 
-      String encryptedEmblem = cipherEncryption(kingdomEmblem.getEmblem().toUpperCase());
+      String encryptedEmblem = cipherEncryptionString(kingdomEmblem.getEmblem().toUpperCase());
       encryptedEmblemKingdoms.put(kingdomEmblem.getKingdomName(), encryptedEmblem);
 
     }
@@ -25,8 +25,8 @@ public class CipherEncryptionImp implements CipherEncryption {
     return encryptedEmblemKingdoms;
   }
 
-  //This private method encrypts emblem and no other class can invoke this method.
-  private String cipherEncryption(String emblem) {
+  //This method encrypts emblem.
+  public String cipherEncryptionString(String emblem) {
 
     int cipherKey = emblem.length();
     String encryptedEmblem = "";

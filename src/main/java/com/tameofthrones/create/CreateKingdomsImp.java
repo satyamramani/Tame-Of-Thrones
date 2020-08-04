@@ -11,7 +11,7 @@ import com.tameofthrones.dto.Kingdom;
 public class CreateKingdomsImp implements CreateKingdoms {
 
   //map to initialize the kingdom name and emblem.
-  Map<String,String> kingdomAndEmblem = new HashMap<String,String>();
+  private Map<String,String> kingdomAndEmblem = new HashMap<String,String>();
   List<Kingdom> kingdoms = new ArrayList<Kingdom>();
 
   //it creates a kingdom with kingdom name and kingdom emblem.
