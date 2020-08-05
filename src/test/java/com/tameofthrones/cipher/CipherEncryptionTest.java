@@ -12,15 +12,23 @@ import com.tameofthrones.create.CreateKingdoms;
 import com.tameofthrones.create.CreateKingdomsImp;
 import com.tameofthrones.dto.Kingdom;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class CipherEncryptionTest {
 
+  CreateKingdoms createkingdoms;
+  CipherEncryption cipherEncryption;
+
+  @BeforeEach
+  void setup() {
+    createkingdoms = new CreateKingdomsImp();
+    cipherEncryption = new CipherEncryptionImp();
+  }
+
   @Test
   public void encryptEmblemTest() throws IOException {
 
-    CreateKingdoms createkingdoms = new CreateKingdomsImp();
-    CipherEncryption cipherEncryption = new CipherEncryptionImp();
     List<Kingdom> kingdoms = createkingdoms.getKingdoms();
     Map<String,String> encryptedEmblemKingdoms = cipherEncryption.encryptEmblem(kingdoms);
 
@@ -34,12 +42,8 @@ public class CipherEncryptionTest {
   public void checkOriginalKingdom() throws IOException { // for kingdom after encryption
 
     List<String> kingdomEmblem = new ArrayList<String>();
-    
-    CreateKingdoms createkingdoms = new CreateKingdomsImp();
   
     List<Kingdom> kingdoms = createkingdoms.getKingdoms();
-
-    CipherEncryption cipherEncryption = new CipherEncryptionImp();
 
     cipherEncryption.encryptEmblem(kingdoms);
 
