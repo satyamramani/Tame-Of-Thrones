@@ -31,8 +31,9 @@ public class Main {
 
     for (String kingdomName : wonKingdoms) {
       System.out.print(kingdomName + " ");
-      System.out.println();
+      
     }
+    System.out.println();
     
   }
 }

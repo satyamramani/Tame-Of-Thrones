@@ -17,7 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="GB"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/home/satyam/project/tame-of-thrones/target/surefire/surefirebooter6117106635748616750.jar /home/satyam/project/tame-of-thrones/target/surefire 2020-08-05T11-00-21_614-jvmRun1 surefire3404844785997114489tmp surefire_08516714992038526456tmp"/>
+    <property name="sun.java.command" value="/home/satyam/project/tame-of-thrones/target/surefire/surefirebooter17463177419286168004.jar /home/satyam/project/tame-of-thrones/target/surefire 2020-08-05T11-15-02_958-jvmRun1 surefire5121819939215365803tmp surefire_013196045641642246347tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/satyam/project/tame-of-thrones/target/test-classes:/home/satyam/project/tame-of-thrones/target/classes:/home/satyam/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-xml/2.11.1/jackson-dataformat-xml-2.11.1.jar:/home/satyam/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.11.1/jackson-core-2.11.1.jar:/home/satyam/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.11.1/jackson-annotations-2.11.1.jar:/home/satyam/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.11.1/jackson-databind-2.11.1.jar:/home/satyam/.m2/repository/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.11.1/jackson-module-jaxb-annotations-2.11.1.jar:/home/satyam/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.2/jakarta.xml.bind-api-2.3.2.jar:/home/satyam/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.1/jakarta.activation-api-1.2.1.jar:/home/satyam/.m2/repository/org/codehaus/woodstox/stax2-api/4.2.1/stax2-api-4.2.1.jar:/home/satyam/.m2/repository/com/fasterxml/woodstox/woodstox-core/6.2.1/woodstox-core-6.2.1.jar:/home/satyam/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar:/home/satyam/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/satyam/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/satyam/.m2/repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar:/home/satyam/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.6.2/junit-jupiter-engine-5.6.2.jar:/home/satyam/.m2/repository/org/junit/platform/junit-platform-engine/1.6.2/junit-platform-engine-1.6.2.jar:/home/satyam/.m2/repository/com/google/guava/guava/16.0.1/guava-16.0.1.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -33,7 +33,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/home/satyam/project/tame-of-thrones/target/surefire/surefirebooter6117106635748616750.jar"/>
+    <property name="surefire.real.class.path" value="/home/satyam/project/tame-of-thrones/target/surefire/surefirebooter17463177419286168004.jar"/>
     <property name="awt.useSystemAAFontSettings" value="on"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.5+10-post-Debian-2"/>
@@ -59,7 +59,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="checkStringEncryptionTest" classname="com.tameofthrones.cipher.CipherEncryptionTest" time="0.001"/>
+  <testcase name="checkStringEncryptionTest" classname="com.tameofthrones.cipher.CipherEncryptionTest" time="0.002"/>
   <testcase name="checkOriginalKingdom" classname="com.tameofthrones.cipher.CipherEncryptionTest" time="0.001"/>
   <testcase name="encryptEmblemTest" classname="com.tameofthrones.cipher.CipherEncryptionTest" time="0.002"/>
 </testsuite>
