@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -18,9 +19,9 @@ import org.junit.jupiter.api.Test;
 public class RulerStrategyTest {
 
   RulerStrategy rulerStrategy = new RulerStrategyImp();
-  
+
   @Test
-  public void rulerStrategy() {
+  public void rulerStrategy() throws IOException {
 
     CreateKingdoms createKingdoms = new CreateKingdomsImp();
 

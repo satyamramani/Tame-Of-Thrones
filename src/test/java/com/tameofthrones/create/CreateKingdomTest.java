@@ -2,6 +2,7 @@ package com.tameofthrones.create;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -13,7 +14,7 @@ import org.junit.jupiter.api.Test;
 public class CreateKingdomTest {
 
   @Test
-  public void getKingdomNameTest() { //for kingdom names
+  public void getKingdomNameTest() throws IOException { // for kingdom names
     
     List<String> kingdomNames = new ArrayList<String>();
 
@@ -43,7 +44,7 @@ public class CreateKingdomTest {
   }
 
   @Test
-  public void getKingdomEmblemTest() { // for kingdom emblem test
+  public void getKingdomEmblemTest() throws IOException { // for kingdom emblem test
 
     List<String> kingdomEmblem = new ArrayList<String>();
 

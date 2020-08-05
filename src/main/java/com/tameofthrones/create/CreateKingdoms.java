@@ -1,5 +1,6 @@
 package com.tameofthrones.create;
 
+import java.io.IOException;
 import java.util.List;
 
 import com.tameofthrones.dto.Kingdom;
@@ -11,6 +12,6 @@ import com.tameofthrones.dto.Kingdom;
 
 public interface CreateKingdoms {
   
-  List<Kingdom> getKingdoms();
+  List<Kingdom> getKingdoms() throws IOException;
 
 }

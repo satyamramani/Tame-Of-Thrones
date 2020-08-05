@@ -2,6 +2,7 @@ package com.tameofthrones.cipher;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -16,7 +17,7 @@ import org.junit.jupiter.api.Test;
 public class CipherEncryptionTest {
 
   @Test
-  public void encryptEmblemTest() {
+  public void encryptEmblemTest() throws IOException {
 
     CreateKingdoms createkingdoms = new CreateKingdomsImp();
     CipherEncryption cipherEncryption = new CipherEncryptionImp();
@@ -30,7 +31,7 @@ public class CipherEncryptionTest {
   }
 
   @Test
-  public void checkOriginalKingdom() { // for kingdom after encryption
+  public void checkOriginalKingdom() throws IOException { // for kingdom after encryption
 
     List<String> kingdomEmblem = new ArrayList<String>();
     

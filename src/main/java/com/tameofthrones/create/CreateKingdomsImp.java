@@ -1,38 +1,40 @@
 package com.tameofthrones.create;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import com.tameofthrones.dto.Kingdom;
 
-
 public class CreateKingdomsImp implements CreateKingdoms {
 
-  //map to initialize the kingdom name and emblem.
-  private Map<String,String> kingdomAndEmblem = new HashMap<String,String>();
   List<Kingdom> kingdoms = new ArrayList<Kingdom>();
 
-  //it creates a kingdom with kingdom name and kingdom emblem.
-  public CreateKingdomsImp() {
+  final String filePath = "src/main/java/com/tameofthrones/resources/kingdom.txt";
 
-    kingdomAndEmblem.put("SPACE", "GORILLA");
-    kingdomAndEmblem.put("LAND", "PANDA");
-    kingdomAndEmblem.put("WATER", "OCTOPUS");
-    kingdomAndEmblem.put("ICE", "MAMMOTH");
-    kingdomAndEmblem.put("AIR", "OWL");
-    kingdomAndEmblem.put("FIRE", "DRAGON");
+  public List<Kingdom> getKingdoms() throws IOException {
 
-  }
+    String line;
+    //read file path
+    File file = new File(filePath);
+    FileReader fr = new FileReader(file);
+    BufferedReader br = new BufferedReader(fr);
 
-  public List<Kingdom> getKingdoms() {
+    //read each line in the input file and seperate kingdom and its emblem using first space.
+    while((line = br.readLine()) != null) {
 
-    for (String kingdomName : kingdomAndEmblem.keySet()) {
-      Kingdom kingdom = new Kingdom(kingdomName, kingdomAndEmblem.get(kingdomName));
-      kingdoms.add(kingdom);
+      String kingdomName = line.substring(0,line.indexOf(' '));
+      String emblem = line.substring(line.indexOf(' ')+1).toUpperCase();
+
+      kingdoms.add(new Kingdom(kingdomName, emblem));
+
     }
     
+    br.close();
+
     return kingdoms;
   }
 
