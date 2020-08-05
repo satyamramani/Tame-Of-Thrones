@@ -34,8 +34,6 @@ public class RulerStrategyTest {
     kingdoms.add(new Kingdom("FIRE","DRAGON"));
     
   }
-
-
   
 
   @Test
@@ -46,10 +44,11 @@ public class RulerStrategyTest {
     messages.add(new Messages("LAND", "FAIJWJSOOFAMAU"));
     messages.add(new Messages("AIR", "ROZO"));
     messages.add(new Messages("ICE", "STHSTSTVSASOS"));
+    messages.add(new Messages("FIRE", "JXGOOMUTOO"));
 
     Set<String> wonKingdoms = rulerStrategy.getWonKingdoms(kingdoms, messages);
 
-    assertEquals(4, wonKingdoms.size());
+    assertEquals(5, wonKingdoms.size());
     assertTrue(wonKingdoms.contains("SPACE"));
     assertTrue(wonKingdoms.contains("LAND"));
     assertTrue(wonKingdoms.contains("AIR"));

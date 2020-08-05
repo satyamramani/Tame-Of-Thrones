@@ -4,7 +4,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import com.tameofthrones.dto.Messages;
@@ -27,14 +26,11 @@ public class ReadMessageTest {
       encryptedMessages.add(message.getMessage());
     }
 
-    Collections.sort(encryptedMessages);
-
     List<String> expectedMessages = new ArrayList<String>();
     expectedMessages.add("ROZO");
     expectedMessages.add("FAIJWJSOOFAMAU");
     expectedMessages.add("STHSTSTVSASOS");
-
-    Collections.sort(expectedMessages);
+    expectedMessages.add("JXGOOMUTOO");
 
     assertEquals(expectedMessages, encryptedMessages);
   }
@@ -51,14 +47,11 @@ public class ReadMessageTest {
       receiver.add(message.getKingdom());
     }
 
-    Collections.sort(receiver);
-
     List<String> expectedReceiver = new ArrayList<String>();
     expectedReceiver.add("AIR");
     expectedReceiver.add("LAND");
     expectedReceiver.add("ICE");
-
-    Collections.sort(expectedReceiver);
+    expectedReceiver.add("FIRE");
 
     assertEquals(expectedReceiver, receiver);
   }

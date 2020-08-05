@@ -1,6 +1,6 @@
 package com.tameofthrones.controller;
 
-import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -15,7 +15,7 @@ public class RulerStrategyImp implements RulerStrategy {
   public Set<String> getWonKingdoms(List<Kingdom> kingdoms, List<Messages> messages) {
   
     //set to store the kingdom won by king.
-    Set<String> wonKingdoms = new HashSet<String>();
+    Set<String> wonKingdoms = new LinkedHashSet<>();
     wonKingdoms.add("SPACE");
 
     CipherEncryption cipherEncryption = new CipherEncryptionImp();
@@ -49,6 +49,7 @@ public class RulerStrategyImp implements RulerStrategy {
       wonKingdoms.clear();
       wonKingdoms.add("NONE");
     }
+
     return wonKingdoms;
   }
 
