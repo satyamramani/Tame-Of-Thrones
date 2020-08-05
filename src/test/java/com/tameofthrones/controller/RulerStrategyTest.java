@@ -39,6 +39,59 @@ public class RulerStrategyTest {
     assertTrue(wonKingdoms.contains("LAND"));
     assertTrue(wonKingdoms.contains("AIR"));
     assertTrue(wonKingdoms.contains("ICE"));
-    assertFalse(wonKingdoms.contains("WATER"));
+  }
+
+  @Test
+  public void rulerWonLessThenThreeKingdoms() throws IOException {
+
+    CreateKingdoms createKingdoms = new CreateKingdomsImp();
+
+    List<Kingdom> kingdoms = createKingdoms.getKingdoms();
+    List<Messages> messages = new ArrayList<Messages>();
+
+    messages.add(new Messages("LAND", "FAIJWJSOOFAMAU"));
+    messages.add(new Messages("AIR", "ROZO"));
+    messages.add(new Messages("ICE", "HSTSTVSASS"));
+    messages.add(new Messages("WATER", "HSCBDYDGCBASS"));
+
+    Set<String> wonKingdoms = rulerStrategy.getWonKingdoms(kingdoms, messages);
+
+    assertEquals(1, wonKingdoms.size());
+    assertTrue(wonKingdoms.contains("NONE"));
+
+  }
+
+  @Test
+  public void rulerStrategyWithNoMessages() throws IOException { //no messages
+
+    CreateKingdoms createKingdoms = new CreateKingdomsImp();
+
+    List<Kingdom> kingdoms = createKingdoms.getKingdoms();
+    List<Messages> messages = new ArrayList<Messages>();
+
+    Set<String> wonKingdoms = rulerStrategy.getWonKingdoms(kingdoms, messages);
+
+    assertEquals(1, wonKingdoms.size());
+    assertTrue(wonKingdoms.contains("NONE"));
+
+  }
+
+  @Test
+  public void rulerStrategyWithWorngKingdomNames() throws IOException { //chech invalid kingdom names
+    
+    CreateKingdoms createKingdoms = new CreateKingdomsImp();
+
+    List<Kingdom> kingdoms = createKingdoms.getKingdoms();
+    List<Messages> messages = new ArrayList<Messages>();
+
+    messages.add(new Messages("land", "FAIJWJSOOFAMAU"));
+    messages.add(new Messages("AOR", "ROZO"));
+    messages.add(new Messages("I@E", "HSTSTVSASS"));
+    messages.add(new Messages("WAER", "HSCBDYDGCBASS"));
+
+    Set<String> wonKingdoms = rulerStrategy.getWonKingdoms(kingdoms, messages);
+
+    assertEquals(1, wonKingdoms.size());
+    assertTrue(wonKingdoms.contains("NONE"));
   }
 }

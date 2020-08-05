@@ -31,7 +31,7 @@ public class ReadMessage {
     while((line = br.readLine()) != null) {
 
       String kingdom = line.substring(0,line.indexOf(' '));
-      String message = line.substring(line.indexOf(' '));
+      String message = line.substring(line.indexOf(' ')+1);
 
       Messages encryptedMessages = new Messages(kingdom, message);
       messages.add(encryptedMessages);

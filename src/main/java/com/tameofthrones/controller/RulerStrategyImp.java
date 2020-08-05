@@ -28,13 +28,19 @@ public class RulerStrategyImp implements RulerStrategy {
 
       String kingdomName = message.getKingdom();
       String encryptedMessage = message.getMessage();
-      String encryptedEmblem = encryptedEmblemKigdoms.get(kingdomName);
+      //if kingdom name is not valid in messgae than discard that message.
+      if (encryptedEmblemKigdoms.containsKey(kingdomName)) {
 
-      //if encrypted message matches with the encrypted emblem for a kingdom than
-      //add the kingdom to the set(wonKingdoms).
-      if (matchEmblem.matchEmblemWithMessage(encryptedMessage, encryptedEmblem)) {
-        wonKingdoms.add(kingdomName);
+        String encryptedEmblem = encryptedEmblemKigdoms.get(kingdomName);
+
+        //if encrypted message matches with the encrypted emblem for a kingdom than
+        //add the kingdom to the set(wonKingdoms).
+        if (matchEmblem.matchEmblemWithMessage(encryptedMessage, encryptedEmblem)) {
+          wonKingdoms.add(kingdomName);
+        }
+
       }
+      
 
     }
 
